@@ -1,12 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.0.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'org.springframework.boot' version '2.7.4'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
     id 'java'
 }
 
 group = 'edu.pucmm.eict'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -28,7 +28,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'de.codecentric:spring-boot-admin-starter-client'
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-io:commons-io:2.11.0'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.h2database:h2'
