@@ -29,13 +29,13 @@ public class AppController {
     @RequestMapping(path = "/")
     public String index(Model model){
 
-        return "redirect:/listar";
+        return "redirect:listar";
     }
 
     @RequestMapping(path = "/listar")
     public String listar(Model model){
         model.addAttribute("fotos", fotoRepository.findAll());
-        return "/listar";
+        return "listar";
     }
 
     @PostMapping(path = "/procesarFoto")
@@ -46,7 +46,7 @@ public class AppController {
         //creando salvando el objeto.
         Foto foto = new Foto(file.getOriginalFilename(), file.getContentType(), encodedString);
         fotoRepository.save(foto);
-        return "redirect:/listar";
+        return "redirect:listar";
     }
 
     @GetMapping(path = "/visualizar/{id}")
@@ -54,10 +54,10 @@ public class AppController {
         Foto foto = fotoRepository.findById(id).orElse(null);
         if(foto==null){
             redirectAttributes.addFlashAttribute("error", "Foto no existe");
-            return "redirect:/listar";
+            return "redirect:listar";
         }
         model.addAttribute("foto", foto);
-        return "/visualizar";
+        return "visualizar";
     }
 
     @GetMapping(path = "/eliminar/{id}")
