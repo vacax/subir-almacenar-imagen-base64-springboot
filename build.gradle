@@ -1,12 +1,16 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.4'
-    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
     id 'java'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
 }
 
 group = 'edu.pucmm.eict'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+
+java {
+    sourceCompatibility = '21'
+}
+
 
 configurations {
     compileOnly {
@@ -19,7 +23,7 @@ repositories {
 }
 
 ext {
-    set('springBootAdminVersion', "2.7.4")
+    set('springBootAdminVersion', "3.3.3")
 }
 
 dependencies {

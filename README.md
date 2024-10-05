@@ -5,5 +5,19 @@ Proyecto para demostrar como almacenar fotos en base
 
 ## Versiones
 
-* Java 17
+* Java 21
 * Spring Boot 2.7.4
+
+## Iniciar Proyecto
+
+Ejecutando la aplicación vía Gradlew:
+
+```
+./gradlew bootRun
+```
+
+Ejecutando desde Docker:
+
+```
+docker build -t subir-imagen . && docker run --rm -p 8080:8080 subir-imagen
+```
