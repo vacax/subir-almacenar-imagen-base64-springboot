@@ -6,7 +6,7 @@ Proyecto para demostrar como almacenar fotos en base
 ## Versiones
 
 * Java 21
-* Spring Boot 2.7.4
+* Spring Boot 3.3.4
 
 ## Iniciar Proyecto
 
